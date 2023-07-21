@@ -1,0 +1,25 @@
+html, body, .container, .line, .squre
+{
+    margin: 0;
+    height: 100%;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+}
+.line
+{
+    flex-shrink: 1;
+    background-color: black;
+    display: flex;
+}
+
+
+.squre
+{  
+    color: white;
+    background-color: rgb(187, 32, 32);
+    flex-shrink: 1;
+    flex-basis: 100%;
+}
