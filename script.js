@@ -1,7 +1,8 @@
 container = document.querySelector(".container");
 let lineDiv = document.createElement("div");
 let inlineDiv = document.createElement("div");
-let btn = document.getElementById("button")
+let SizeBtn = document.getElementById("buttonSize")
+let rainbowBtn = document.getElementById("buttonRainbow")
 lineDiv.classList.add("line");
 inlineDiv.classList.add("squre")
 
@@ -56,13 +57,13 @@ for (let i = 1; i<=num; i++)
     }    
 }
 }
-
 //let grid_size = alert("Enter gride size");
-creatGrid(16)
+let userInput = 16
+creatGrid(userInput)
 
-function setGriidSize ()
+function setRainbow ()
 {
-    let userInput = prompt("Enter the grid size");
+
     if(userInput>100)
     {
         alert("too high enter number lower then 100");
@@ -71,16 +72,26 @@ function setGriidSize ()
     else creatGridRgb(userInput);
 }
 
-/*function randomColor ()
+function setGriidSize ()
 {
-   
-    let userColor = 
-    return userColor;
+    
+    if(userInput>100)
+    {
+        alert("too high enter number lower then 100");
+    }
+    
+    else creatGrid(userInput);
 }
-*/
 
-btn.addEventListener("click",() => setGriidSize());
 
-//let squre = document.querySelector(".squre");
+SizeBtn.addEventListener("click",() => 
+
+    {
+        userInput = prompt("Enter the grid size");
+        setGriidSize();
+    });
+
+rainbowBtn.addEventListener("click",() => setRainbow());
+
 
 
